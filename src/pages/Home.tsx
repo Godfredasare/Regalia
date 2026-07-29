@@ -1,21 +1,22 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { PageTransition } from "@/components/ui/PageTransition";
 import { Newsletter } from "@/components/ui/Newsletter";
-import { instagramPosts } from "@/data";
 
-const fadeUp = {
+const easeOut = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 1.2, ease: easeOut },
   },
 };
 
-const fadeIn = {
+const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -23,27 +24,27 @@ const fadeIn = {
   },
 };
 
-const revealLine = {
+const revealLine: Variants = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
-    transition: { duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.3 },
+    transition: { duration: 1, ease: easeOut, delay: 0.3 },
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.2, delayChildren: 0.1 } },
 };
 
-const wordVariant = {
+const wordVariant: Variants = {
   hidden: { y: 32, opacity: 0 },
   visible: (i: number) => ({
     y: 0,
     opacity: 1,
     transition: {
       duration: 1.2,
-      ease: [0.22, 1, 0.36, 1],
+      ease: easeOut,
       delay: i * 0.18,
     },
   }),
@@ -70,42 +71,6 @@ function AnimatedQuote({ text }: { text: string }) {
         </motion.span>
       ))}
     </motion.blockquote>
-  );
-}
-
-function ParallaxImage({
-  src,
-  alt,
-  className,
-  speed = 0.12,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  speed?: number;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [`${-speed * 100}%`, `${speed * 100}%`],
-  );
-
-  return (
-    <div ref={ref} className={`relative overflow-hidden ${className || ""}`}>
-      <motion.div style={{ y }} className="absolute inset-x-0 -inset-y-[20%]">
-        <img
-          src={src}
-          alt={alt}
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-      </motion.div>
-    </div>
   );
 }
 
@@ -185,7 +150,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, delay: 0.5, ease: easeOut }}
             className="text-[10px] md:text-[11px] font-medium uppercase tracking-[0.5em] text-gold/90 mb-8"
           >
             REGALIA by June &amp; Co.
@@ -194,7 +159,7 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.4, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.4, delay: 0.8, ease: easeOut }}
             className="font-heading text-[clamp(2.8rem,7vw,6.5rem)] font-light leading-[0.95] text-white tracking-tight max-w-5xl"
           >
             Presence is
@@ -205,7 +170,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, delay: 1.4, ease: easeOut }}
             className="mt-8 text-[13px] md:text-sm font-light text-white/60 tracking-wide max-w-md"
           >
             Where African heritage meets contemporary luxury.
@@ -214,7 +179,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 2, ease: easeOut }}
             className="mt-14"
           >
             <Link to="/collections">
@@ -306,7 +271,7 @@ testament to the belief that African luxury is a timeless standard.
         >
           <Link
             to="/collections"
-            className="inline-flex items-center pb-5 pt-5 gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian/70 border-b border-obsidian/20 pb-0.5 hover:border-gold hover:text-gold transition-all duration-700"
+            className="inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian/70 border-b border-obsidian/20 pb-0.5 hover:border-gold hover:text-gold transition-all duration-700"
           >
             Discover
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" />
