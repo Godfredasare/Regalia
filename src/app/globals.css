@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@theme {
+  /* ============================================================
+     REGALIA OFFICIAL COLOR SYSTEM
+     Midnight Navy (primary) · Ivory Cream (base) · Ceremonial Gold
+     (accent) · Emerald (special collections) · Charcoal Ink (text)
+     ============================================================ */
+
+  /* Primary — Midnight Navy */
+  --color-navy: #1f3a5f;
+  --color-navy-light: #2a4a73;
+  --color-navy-dark: #16294a;
+
+  /* Accent — Ceremonial Gold (for distinction, not decoration) */
+  --color-gold: #c9a227;
+  --color-gold-light: #d9b13a;
+  --color-gold-dark: #a8871f;
+
+  /* Base — Ivory Cream */
+  --color-cream: #fbf8f0;
+  --color-cream-light: #fffdf8;
+  --color-cream-dark: #f1ebdd;
+
+  /* Secondary — Emerald (sparingly, for special collections) */
+  --color-emerald: #0f5b43;
+  --color-emerald-light: #17755a;
+
+  /* Text — Charcoal Ink */
+  --color-ink: #1a1a1a;
+
+  /* ------------------------------------------------------------
+     Legacy token names — mapped to the official palette so every
+     existing class (bg-obsidian, bg-ivory, text-warm-gray, …)
+     follows the brand system without touching components.
+     ------------------------------------------------------------ */
+  --color-obsidian: var(--color-navy);
+  --color-obsidian-light: var(--color-navy-light);
+  --color-midnight: var(--color-navy-dark);
+  --color-midnight-light: var(--color-navy-light);
+  --color-ivory: var(--color-cream);
+  --color-ivory-light: var(--color-cream-light);
+  --color-ivory-dark: var(--color-cream-dark);
+  --color-warm-gray: #5a5a5a;
+  --color-light-gray: #e9e5dc;
+  --color-border-subtle: #e4e0d6;
+
+  /* ------------------------------------------------------------
+     REGALIA TYPOGRAPHY SYSTEM
+     Cinzel (display / presence) · EB Garamond (editorial /
+     elegance) · Montserrat (UI / modern function)
+     ------------------------------------------------------------ */
+  --font-heading: var(--font-cinzel), "Cinzel", Georgia, serif;
+  --font-accent: var(--font-editorial), "EB Garamond", Georgia, serif;
+  --font-body: var(--font-ui), "Montserrat", system-ui, sans-serif;
+
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-fade-up: fade-up 0.8s ease-out forwards;
+  --animate-slide-in: slide-in 0.6s ease-out forwards;
+  --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
+  --animate-text-reveal: text-reveal 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slow-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@keyframes text-reveal {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-cream);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-gold);
+  color: white;
+}
+
+/* Luxury Heading Styles */
+.heading-xl {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.heading-lg {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.heading-md {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.heading-sm {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* Luxury Body Styles */
+.body-lg {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Gold line separator */
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.gold-line-long {
+  width: 120px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+/* Image overlay gradient */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.4) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.8) 100%
+  );
+}
+
+/* Page transition */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}

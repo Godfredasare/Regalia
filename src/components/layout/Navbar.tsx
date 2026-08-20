@@ -1,5 +1,8 @@
+'use client'
+
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Search, ShoppingBag, ChevronDown, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -44,8 +47,8 @@ export function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null)
   const { isScrolled } = useScrollPosition()
-  const location = useLocation()
-  const isHome = location.pathname === '/'
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   // Navbar always visible — transparent at top, solid on scroll
   const showNav = true
@@ -54,7 +57,7 @@ export function Navbar() {
     setMobileOpen(false)
     setActiveDropdown(null)
     setExpandedMobile(null)
-  }, [location])
+  }, [pathname])
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
@@ -74,8 +77,8 @@ export function Navbar() {
           'fixed top-0 left-0 right-0 z-[100] transition-colors duration-700 ease-out',
           isHome && !isScrolled
             ? 'bg-transparent'
-            : 'bg-white/95 backdrop-blur-md',
-          isHome && !isScrolled ? 'text-white' : 'text-obsidian'
+            : 'bg-navy/95 backdrop-blur-md',
+          isHome && !isScrolled ? 'text-white' : 'text-ivory'
         )}
       >
         <nav className="max-w-[1440px] mx-auto px-6 md:px-10 xl:px-16 h-[72px] grid grid-cols-[1fr_auto_1fr] items-center">
@@ -89,7 +92,7 @@ export function Navbar() {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to={link.href}
+                  href={link.href}
                   className="text-[10px] font-medium uppercase tracking-[0.2em] hover:text-gold transition-colors duration-500 flex items-center gap-1.5"
                 >
                   {link.label}
@@ -103,12 +106,12 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.3, ease: 'easeOut' }}
-                      className="absolute top-full left-0 w-52 bg-white shadow-2xl border border-border-subtle/50 py-5"
+                      className="absolute top-full left-0 w-52 bg-ivory shadow-2xl border border-border-subtle/50 py-5"
                     >
                       {link.children.map((child) => (
                         <Link
                           key={child.label}
-                          to={child.href}
+                          href={child.href}
                           className="block px-6 py-2.5 text-[11px] font-light text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300"
                         >
                           {child.label}
@@ -123,7 +126,7 @@ export function Navbar() {
 
           {/* Center — Logo */}
           <Link
-            to="/"
+            href="/"
             className="font-heading text-xl md:text-2xl font-light tracking-[0.25em] whitespace-nowrap"
           >
             REGALIA
@@ -134,14 +137,14 @@ export function Navbar() {
             {navLinksRight.map((link) => (
               <Link
                 key={link.label}
-                to={link.href}
+                href={link.href}
                 className="text-[10px] font-medium uppercase tracking-[0.2em] hover:text-gold transition-colors duration-500"
               >
                 {link.label}
               </Link>
             ))}
             <span className="w-px h-4 bg-current opacity-20" />
-            <Link to="/shop" className="hover:text-gold transition-colors duration-500">
+            <Link href="/shop" className="hover:text-gold transition-colors duration-500">
               <Search className="w-[16px] h-[16px]" strokeWidth={1.5} />
             </Link>
             <button className="hover:text-gold transition-colors duration-500">
@@ -151,7 +154,7 @@ export function Navbar() {
 
           {/* Mobile: Icons + Toggle */}
           <div className="flex lg:hidden items-center justify-end gap-5">
-            <Link to="/shop" className="hover:text-gold transition-colors duration-500">
+            <Link href="/shop" className="hover:text-gold transition-colors duration-500">
               <Search className="w-[16px] h-[16px]" strokeWidth={1.5} />
             </Link>
             <button className="hover:text-gold transition-colors duration-500">
@@ -184,7 +187,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-white z-[101] overflow-y-auto flex flex-col"
+              className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-ivory z-[101] overflow-y-auto flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-border-subtle pt-[calc(1.5rem+env(safe-area-inset-top,0px))]">
                 <span className="font-heading text-xl tracking-[0.2em]">REGALIA</span>
@@ -231,7 +234,7 @@ export function Navbar() {
                               {(link.children as { label: string; href: string }[]).map((child) => (
                                 <Link
                                   key={child.label}
-                                  to={child.href}
+                                  href={child.href}
                                   className="block px-12 py-3 text-[11px] font-light uppercase tracking-[0.12em] text-warm-gray hover:text-gold hover:bg-ivory-light/80 transition-all duration-300 border-b border-border-subtle/20"
                                   onClick={() => setMobileOpen(false)}
                                 >
@@ -244,7 +247,7 @@ export function Navbar() {
                       </>
                     ) : (
                       <Link
-                        to={link.href}
+                        href={link.href}
                         className="block px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300 border-b border-border-subtle/30"
                       >
                         {link.label}
@@ -254,7 +257,7 @@ export function Navbar() {
                 ))}
               </div>
               <div className="px-8 py-6 border-t border-border-subtle space-y-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))]">
-                <Link to="/shop" className="flex items-center gap-3 text-sm text-warm-gray hover:text-obsidian transition-colors">
+                <Link href="/shop" className="flex items-center gap-3 text-sm text-warm-gray hover:text-obsidian transition-colors">
                   <Search className="w-4 h-4" />
                   Search
                 </Link>

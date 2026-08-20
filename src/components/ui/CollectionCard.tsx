@@ -1,3 +1,6 @@
+'use client'
+
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 
@@ -11,6 +14,8 @@ interface CollectionCardProps {
   variant?: 'default' | 'tall'
 }
 
+const MotionLink = motion.create(Link)
+
 export function CollectionCard({
   name,
   description,
@@ -21,7 +26,7 @@ export function CollectionCard({
   variant = 'default',
 }: CollectionCardProps) {
   return (
-    <motion.a
+    <MotionLink
       href={`/collections/${slug}`}
       className={cn(
         'group relative block overflow-hidden',
@@ -61,6 +66,6 @@ export function CollectionCard({
           )}
         </div>
       </div>
-    </motion.a>
+    </MotionLink>
   )
 }

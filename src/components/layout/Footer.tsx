@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { Camera, X, Share2, ArrowUp } from 'lucide-react'
 
 const footerLinks = {
@@ -40,21 +42,25 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 mb-14 md:mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2 text-center md:text-left">
-            <Link to="/" className="font-heading text-2xl md:text-3xl font-light tracking-wider block mb-6">
+            <Link href="/" className="font-heading text-2xl md:text-3xl font-light tracking-wider block mb-6">
               REGALIA
             </Link>
-            <p className="text-sm font-light text-white/50 leading-relaxed max-w-sm mx-auto md:mx-0 mb-8">
+            <p className="text-sm font-light text-white/50 leading-relaxed max-w-sm mx-auto md:mx-0 mb-6">
               Where African heritage meets modern luxury. Bespoke tailoring and editorial fashion from the House of June & Co.
+            </p>
+            <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-gold mb-8">
+              Every Stitch Tells a Story of Excellence.
             </p>
             <div className="flex justify-center md:justify-start gap-5">
               {[Camera, X, Share2].map((Icon, i) => (
-                <a
+                <Link
                   key={i}
-                  href="#"
+                  href="/"
+                  aria-label="Social link"
                   className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:text-gold hover:border-gold/50 transition-all duration-300"
                 >
                   <Icon className="w-4 h-4" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -62,14 +68,14 @@ export function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title} className="text-center md:text-left">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.25em] text-gold mb-6">
+              <h4 className="text-[11px] font-medium uppercase tracking-[0.25em] text-white/60 mb-6">
                 {title}
               </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
-                      to={link.href}
+                      href={link.href}
                       className="text-[13px] font-light text-white/50 hover:text-white transition-colors duration-300"
                     >
                       {link.label}

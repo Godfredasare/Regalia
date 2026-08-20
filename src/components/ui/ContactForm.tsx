@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { Send, MapPin, Clock, Phone, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -88,7 +90,7 @@ export function ContactForm() {
 
 export function ContactInfo() {
   const items = [
-    { icon: MapPin, label: 'Visit Our Atelier', value: '14 Victoria Island\nLagos, Nigeria' },
+    { icon: MapPin, label: 'Visit Our Atelier', value: 'Tse-Addo\nAccra, Ghana' },
     { icon: Phone, label: 'Call Us', value: '+234 801 234 5678' },
     { icon: Mail, label: 'Email', value: 'hello@regaliajune.com' },
     { icon: Clock, label: 'Hours', value: 'Mon — Sat: 9am — 6pm\nSunday: By Appointment' },
@@ -98,7 +100,7 @@ export function ContactInfo() {
     <div className="space-y-8">
       {items.map((item) => (
         <div key={item.label} className="flex gap-5">
-          <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-gold/30 text-gold">
+          <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-obsidian/20 text-obsidian">
             <item.icon className="w-5 h-5" />
           </div>
           <div>

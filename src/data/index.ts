@@ -1,10 +1,4 @@
-// ============================================================================
-// REGALIA by June & Co. — Mock Data
-// ============================================================================
 
-// ---------------------------------------------------------------------------
-// Interfaces
-// ---------------------------------------------------------------------------
 
 export interface Product {
   id: number;
@@ -127,9 +121,9 @@ export const products: Product[] = [
       "Inner lining in Bemberg silk",
     ],
     images: [
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "/men/2c8bc693880adb8e4bfe28a43af63a61.jpg",
+      "/men/94a74682ebf1c052463f93f89d858fdf.jpg",
+      "/men/abc0bdce585b214bc62bee3af1d287d8.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -156,9 +150,9 @@ export const products: Product[] = [
       "Satin-stripe interior piping",
     ],
     images: [
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80",
-      "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80",
+      "/men/94a74682ebf1c052463f93f89d858fdf.jpg",
+      "/men/abc0bdce585b214bc62bee3af1d287d8.jpg",
+      "/9b892dd1facc01bfe2e4d410c736ef4f.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -185,9 +179,9 @@ export const products: Product[] = [
       "French seam finishing",
     ],
     images: [
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800&q=80",
+      "/men/abc0bdce585b214bc62bee3af1d287d8.jpg",
+      "/9b892dd1facc01bfe2e4d410c736ef4f.jpg",
+      "/men/2c8bc693880adb8e4bfe28a43af63a61.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -216,9 +210,9 @@ export const products: Product[] = [
       "Dry clean only",
     ],
     images: [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
-      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://i.pinimg.com/736x/de/9e/23/de9e23d77654d78af8b455807c62ecb1.jpg",
+      "https://i.pinimg.com/736x/ec/eb/cf/ecebcf84219b93c9cbc8337358c7278f.jpg",
+      "https://i.pinimg.com/736x/89/ec/32/89ec328d75b43508d7bcb85b4e2bbc6d.jpg",
     ],
     featured: true,
     newArrival: true,
@@ -245,9 +239,9 @@ export const products: Product[] = [
       "Silk-blend lining",
     ],
     images: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://i.pinimg.com/736x/ec/eb/cf/ecebcf84219b93c9cbc8337358c7278f.jpg",
+      "https://i.pinimg.com/736x/89/ec/32/89ec328d75b43508d7bcb85b4e2bbc6d.jpg",
+      "https://i.pinimg.com/736x/02/89/04/02890490e4ebe20924823aaa4bbecb35.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -274,9 +268,9 @@ export const products: Product[] = [
       "Machine washable on gentle cycle",
     ],
     images: [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80",
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
+      "https://i.pinimg.com/736x/89/ec/32/89ec328d75b43508d7bcb85b4e2bbc6d.jpg",
+      "https://i.pinimg.com/736x/02/89/04/02890490e4ebe20924823aaa4bbecb35.jpg",
+      "https://i.pinimg.com/736x/4d/ac/c3/4dacc3f44d4aae383997f97be9b4924e.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -305,9 +299,9 @@ export const products: Product[] = [
       "Each piece takes 120+ hours of hand-weaving",
     ],
     images: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
-      "https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=800&q=80",
+      "https://i.pinimg.com/736x/fa/b2/e4/fab2e48120199081accaf3bb1fecc6ec.jpg",
+      "https://i.pinimg.com/736x/3c/b6/e6/3cb6e676d25f85b65faa96ce92971fc3.jpg",
+      "https://i.pinimg.com/1200x/1d/88/92/1d8892918a9956eba6288b01fc972f88.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -334,9 +328,9 @@ export const products: Product[] = [
       "Includes matching embroidered cap",
     ],
     images: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "https://i.pinimg.com/736x/3c/b6/e6/3cb6e676d25f85b65faa96ce92971fc3.jpg",
+      "https://i.pinimg.com/1200x/1d/88/92/1d8892918a9956eba6288b01fc972f88.jpg",
+      "https://i.pinimg.com/736x/fa/b2/e4/fab2e48120199081accaf3bb1fecc6ec.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -363,9 +357,9 @@ export const products: Product[] = [
       "Dry clean recommended",
     ],
     images: [
-      "https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=800&q=80",
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
+      "https://i.pinimg.com/1200x/1d/88/92/1d8892918a9956eba6288b01fc972f88.jpg",
+      "https://i.pinimg.com/736x/fa/b2/e4/fab2e48120199081accaf3bb1fecc6ec.jpg",
+      "https://i.pinimg.com/736x/3c/b6/e6/3cb6e676d25f85b65faa96ce92971fc3.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -394,9 +388,9 @@ export const products: Product[] = [
       "Travel-friendly wrinkle resistance",
     ],
     images: [
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&q=80",
+      "https://i.pinimg.com/736x/72/78/ed/7278ed6bf04d5b8766a05971dba4f14e.jpg",
+      "https://i.pinimg.com/736x/a1/aa/ba/a1aaba5bbec720058632f834baf6313b.jpg",
+      "https://i.pinimg.com/736x/f5/7e/b9/f57eb9c6e5ea498ae6051eae1f10baff.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -423,9 +417,9 @@ export const products: Product[] = [
       "YKK Excella zippers",
     ],
     images: [
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=800&q=80",
+      "https://i.pinimg.com/736x/a1/aa/ba/a1aaba5bbec720058632f834baf6313b.jpg",
+      "https://i.pinimg.com/736x/f5/7e/b9/f57eb9c6e5ea498ae6051eae1f10baff.jpg",
+      "https://i.pinimg.com/736x/a6/d8/58/a6d8589d27a7d6bea9447c2e46bc9bef.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -452,9 +446,9 @@ export const products: Product[] = [
       "Naturally insulating flannel weight",
     ],
     images: [
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "https://i.pinimg.com/736x/f5/7e/b9/f57eb9c6e5ea498ae6051eae1f10baff.jpg",
+      "https://i.pinimg.com/736x/a6/d8/58/a6d8589d27a7d6bea9447c2e46bc9bef.jpg",
+      "https://i.pinimg.com/736x/72/78/ed/7278ed6bf04d5b8766a05971dba4f14e.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -483,9 +477,9 @@ export const products: Product[] = [
       "Two complimentary fitting sessions included",
     ],
     images: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
-      "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/African_Fashion_in_Uganda_01.jpg/960px-African_Fashion_in_Uganda_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/African_Fashion_in_Uganda_02.jpg/960px-African_Fashion_in_Uganda_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/16/Dashiki_and_kufi_%28cropped%29.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -512,9 +506,9 @@ export const products: Product[] = [
       "Complimentary garment bag and preservation kit",
     ],
     images: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
-      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800&q=80",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+      "https://i.pinimg.com/736x/02/89/04/02890490e4ebe20924823aaa4bbecb35.jpg",
+      "https://i.pinimg.com/736x/4d/ac/c3/4dacc3f44d4aae383997f97be9b4924e.jpg",
+      "https://i.pinimg.com/736x/de/9e/23/de9e23d77654d78af8b455807c62ecb1.jpg",
     ],
     featured: true,
     newArrival: true,
@@ -541,9 +535,9 @@ export const products: Product[] = [
       "Rush orders available (4-week turnaround)",
     ],
     images: [
-      "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80",
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/African_Fashion_in_Uganda_02.jpg/960px-African_Fashion_in_Uganda_02.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/African_Fashion_in_Uganda_01.jpg/960px-African_Fashion_in_Uganda_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/16/Dashiki_and_kufi_%28cropped%29.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -572,9 +566,9 @@ export const products: Product[] = [
       "Pre-washed for a lived-in hand feel",
     ],
     images: [
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80",
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
+      "https://i.pinimg.com/1200x/24/c3/1a/24c31a86f610c9e1d150156537cb0eac.jpg",
+      "https://i.pinimg.com/736x/34/a6/0f/34a60f7723d5d21f2c14964a3c3b70c0.jpg",
+      "https://i.pinimg.com/736x/e5/42/20/e54220c448994346c0edbf3468664d61.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -601,9 +595,9 @@ export const products: Product[] = [
       "Washed for softness",
     ],
     images: [
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80",
+      "https://i.pinimg.com/736x/34/a6/0f/34a60f7723d5d21f2c14964a3c3b70c0.jpg",
+      "https://i.pinimg.com/736x/e5/42/20/e54220c448994346c0edbf3468664d61.jpg",
+      "https://i.pinimg.com/1200x/24/c3/1a/24c31a86f610c9e1d150156537cb0eac.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -630,9 +624,9 @@ export const products: Product[] = [
       "Lightweight and packable",
     ],
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
+      "https://i.pinimg.com/736x/e5/42/20/e54220c448994346c0edbf3468664d61.jpg",
+      "https://i.pinimg.com/1200x/24/c3/1a/24c31a86f610c9e1d150156537cb0eac.jpg",
+      "https://i.pinimg.com/736x/34/a6/0f/34a60f7723d5d21f2c14964a3c3b70c0.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -661,9 +655,9 @@ export const products: Product[] = [
       "Shrinkage-controlled fabric",
     ],
     images: [
-      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
+      "https://i.pinimg.com/736x/f7/41/36/f741369c602d24a0490ebecf68b7bfeb.jpg",
+      "https://i.pinimg.com/1200x/10/11/b0/1011b04e90efffe78d58348f498f6007.jpg",
+      "https://i.pinimg.com/1200x/21/f9/31/21f93146734665be2a6fc213f548b0b9.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -698,9 +692,9 @@ export const products: Product[] = [
       "Sustainably sourced and ethically produced",
     ],
     images: [
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80",
+      "https://i.pinimg.com/1200x/10/11/b0/1011b04e90efffe78d58348f498f6007.jpg",
+      "https://i.pinimg.com/1200x/21/f9/31/21f93146734665be2a6fc213f548b0b9.jpg",
+      "https://i.pinimg.com/736x/f7/41/36/f741369c602d24a0490ebecf68b7bfeb.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -727,9 +721,9 @@ export const products: Product[] = [
       "Naturally moisture-wicking and odor-resistant",
     ],
     images: [
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80",
+      "https://i.pinimg.com/1200x/21/f9/31/21f93146734665be2a6fc213f548b0b9.jpg",
+      "https://i.pinimg.com/736x/f7/41/36/f741369c602d24a0490ebecf68b7bfeb.jpg",
+      "https://i.pinimg.com/1200x/10/11/b0/1011b04e90efffe78d58348f498f6007.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -758,9 +752,9 @@ export const products: Product[] = [
       "Private fitting with the creative director",
     ],
     images: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "https://i.pinimg.com/736x/fa/b2/e4/fab2e48120199081accaf3bb1fecc6ec.jpg",
+      "https://i.pinimg.com/736x/3c/b6/e6/3cb6e676d25f85b65faa96ce92971fc3.jpg",
+      "https://i.pinimg.com/1200x/1d/88/92/1d8892918a9956eba6288b01fc972f88.jpg",
     ],
     featured: true,
     newArrival: true,
@@ -787,9 +781,9 @@ export const products: Product[] = [
       "Includes lifetime repair guarantee",
     ],
     images: [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=800&q=80",
+      "https://i.pinimg.com/736x/72/78/ed/7278ed6bf04d5b8766a05971dba4f14e.jpg",
+      "https://i.pinimg.com/736x/a1/aa/ba/a1aaba5bbec720058632f834baf6313b.jpg",
+      "https://i.pinimg.com/736x/f5/7e/b9/f57eb9c6e5ea498ae6051eae1f10baff.jpg",
     ],
     featured: true,
     newArrival: false,
@@ -818,9 +812,9 @@ export const products: Product[] = [
       "Presented in branded gift box",
     ],
     images: [
-      "https://images.unsplash.com/photo-1598804777883-0c0d7b20f586?w=800&q=80",
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+      "https://i.pinimg.com/736x/4a/63/3c/4a633c65f4d27477349ca55567047df8.jpg",
+      "https://i.pinimg.com/736x/d7/47/b0/d747b00b5450b1d27675c723acb7b784.jpg",
+      "https://i.pinimg.com/1200x/c1/20/02/c120027e9afa1eda8f36fd8bf3382f3e.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -847,9 +841,9 @@ export const products: Product[] = [
       "Presented in a linen dust bag",
     ],
     images: [
-      "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
-      "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=800&q=80",
+      "https://i.pinimg.com/736x/d7/47/b0/d747b00b5450b1d27675c723acb7b784.jpg",
+      "https://i.pinimg.com/1200x/c1/20/02/c120027e9afa1eda8f36fd8bf3382f3e.jpg",
+      "https://i.pinimg.com/736x/4a/63/3c/4a633c65f4d27477349ca55567047df8.jpg",
     ],
     featured: false,
     newArrival: true,
@@ -876,9 +870,9 @@ export const products: Product[] = [
       "Machine-rolled hems for consistency",
     ],
     images: [
-      "https://images.unsplash.com/photo-1598804777883-0c0d7b20f586?w=800&q=80",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
+      "https://i.pinimg.com/1200x/c1/20/02/c120027e9afa1eda8f36fd8bf3382f3e.jpg",
+      "https://i.pinimg.com/736x/4a/63/3c/4a633c65f4d27477349ca55567047df8.jpg",
+      "https://i.pinimg.com/736x/d7/47/b0/d747b00b5450b1d27675c723acb7b784.jpg",
     ],
     featured: false,
     newArrival: false,
@@ -900,7 +894,7 @@ export const collections: Collection[] = [
     description:
       "Impeccably tailored suits, blazers, and trousers for the modern gentleman. Each piece is a masterclass in precision tailoring, using the world's finest fabrics from Italian mills and English workshops.",
     image:
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "/men/2c8bc693880adb8e4bfe28a43af63a61.jpg",
     productCount: 3,
     featured: true,
   },
@@ -911,7 +905,7 @@ export const collections: Collection[] = [
     description:
       "Powerful silhouettes and sumptuous fabrics define the REGALIA womenswear collection. From commanding blazers to ethereal gowns, every piece is designed for the woman who leads with style.",
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
+      "https://i.pinimg.com/1200x/8d/3c/cd/8d3ccd15a0fc2535ea7b5330f3807595.jpg",
     productCount: 3,
     featured: true,
   },
@@ -922,7 +916,7 @@ export const collections: Collection[] = [
     description:
       "A celebration of African sartorial heritage, reimagined through the lens of luxury. Agbadas, Senator sets, and Iro & Buba ensembles crafted with ancestral techniques and contemporary refinement.",
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&q=80",
+      "https://i.pinimg.com/1200x/1d/88/92/1d8892918a9956eba6288b01fc972f88.jpg",
     productCount: 3,
     featured: true,
   },
@@ -933,7 +927,7 @@ export const collections: Collection[] = [
     description:
       "Commanding professional attire engineered for the boardroom and beyond. Wrinkle-resistant, travel-friendly, and effortlessly authoritative — because leadership is worn, not spoken.",
     image:
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80",
+      "https://i.pinimg.com/736x/a6/d8/58/a6d8589d27a7d6bea9447c2e46bc9bef.jpg",
     productCount: 3,
     featured: false,
   },
@@ -944,7 +938,7 @@ export const collections: Collection[] = [
     description:
       "For the moments that matter most. Bespoke bridal and groom ensembles crafted with devotion, precision, and an unwavering commitment to making your day unforgettable.",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/African_Fashion_in_Uganda_01.jpg/960px-African_Fashion_in_Uganda_01.jpg",
     productCount: 3,
     featured: true,
   },
@@ -955,7 +949,7 @@ export const collections: Collection[] = [
     description:
       "Relaxed elegance for the discerning weekend. Linen suits, resort sets, and elevated separates that prove comfort and luxury are never mutually exclusive.",
     image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+      "https://i.pinimg.com/1200x/24/c3/1a/24c31a86f610c9e1d150156537cb0eac.jpg",
     productCount: 3,
     featured: false,
   },
@@ -966,7 +960,7 @@ export const collections: Collection[] = [
     description:
       "Immediate luxury, zero compromise. Our ready-to-wear collection delivers REGALIA's signature quality in versatile, everyday pieces — from perfect shirting to essential chinos.",
     image:
-      "https://images.unsplash.com/photo-1589310243389-96a5483213a8?w=800&q=80",
+      "https://i.pinimg.com/1200x/10/11/b0/1011b04e90efffe78d58348f498f6007.jpg",
     productCount: 3,
     featured: false,
   },
@@ -977,7 +971,7 @@ export const collections: Collection[] = [
     description:
       "Rare, numbered, and extraordinary. Our limited editions fuse African artistry with European craftsmanship in garments that transcend fashion to become collectible works of art.",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://i.pinimg.com/1200x/24/c3/1a/24c31a86f610c9e1d150156537cb0eac.jpg",
     productCount: 2,
     featured: true,
   },
@@ -988,7 +982,7 @@ export const collections: Collection[] = [
     description:
       "The finishing touches that distinguish the distinguished. Handcrafted silk ties, Italian leather belts, and printed pocket squares — each a small masterpiece of detail and intention.",
     image:
-      "https://images.unsplash.com/photo-1598804777883-0c0d7b20f586?w=800&q=80",
+      "https://i.pinimg.com/1200x/c1/20/02/c120027e9afa1eda8f36fd8bf3382f3e.jpg",
     productCount: 3,
     featured: false,
   },
@@ -1006,7 +1000,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "REGALIA understands that clothing is not merely worn — it is projected. Every Agbada they have crafted for me has been a statement of identity. The artisanship is simply unmatched on the continent.",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 5,
   },
   {
@@ -1016,7 +1010,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "I've had suits made in Savile Row, Milan, and Hong Kong. REGALIA by June & Co. stands shoulder to shoulder with the very best. Their attention to cultural detail while maintaining global sophistication is remarkable.",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 5,
   },
   {
@@ -1026,7 +1020,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "The Boardroom Suit has become my uniform of authority. Clients notice. Juries notice. There is an undeniable confidence that comes from wearing something made with such intention and precision.",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 5,
   },
   {
@@ -1036,7 +1030,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "As someone who reviews luxury fashion for a living, I can say without hesitation that REGALIA's Limited Editions are among the most exciting garments being produced anywhere in the world today. The Kente Masterpiece is a work of art.",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 5,
   },
   {
@@ -1046,7 +1040,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "When I represent my country on the world stage, I wear REGALIA. Their ability to weave Ghanaian heritage into a garment that commands respect in any embassy or state house is truly extraordinary.",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 4,
   },
   {
@@ -1056,7 +1050,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "From the initial consultation to the final fitting, the REGALIA experience is pure luxury. They didn't just make me a dress — they understood my brand, my body, and my vision. The Empress Gown was perfection.",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
     rating: 5,
   },
 ];
@@ -1071,9 +1065,9 @@ export const fabrics: Fabric[] = [
     name: "Super 150s Wool",
     origin: "Italy",
     description:
-      "Sourced from the legendary mills of Biella, this ultra-fine merino wool boasts a thread count of 150s — yielding a fabric of extraordinary softness with a luminous sheen. It drapes like liquid and resists wrinkling, making it the gold standard for REGALIA's signature suits.",
+      "Sourced through REGALIA's direct partnerships with the world's finest mills, this ultra-fine merino wool boasts a thread count of 150s — yielding a fabric of extraordinary softness with a luminous sheen. It drapes like liquid and resists wrinkling, making it the gold standard for REGALIA's signature suits.",
     texture:
-      "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kent_wove.jpg",
     properties: [
       "Ultra-fine 150s thread count",
       "Natural breathability",
@@ -1090,7 +1084,7 @@ export const fabrics: Fabric[] = [
     description:
       "A heritage worsted wool from the Huddersfield district, renowned for centuries as the epicenter of premium cloth. The Westminster Worsted has a crisp hand, excellent drape, and a subtle diagonal twill weave that speaks of quiet authority.",
     texture:
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Stack_of_Adire_%2C_a_local_Fabric_from_Abeoukuta.JPG/960px-Stack_of_Adire_%2C_a_local_Fabric_from_Abeoukuta.JPG",
     properties: [
       "Traditional Huddersfield weave",
       "Firm, crisp hand feel",
@@ -1107,7 +1101,7 @@ export const fabrics: Fabric[] = [
     description:
       "Grown in the Aegean coastal region and woven in Istanbul's historic textile quarter, this long-staple cotton twill offers remarkable durability with a buttery soft hand. Its diagonal weave creates a subtle texture that elevates any garment.",
     texture:
-      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/3/3a/Traditional_mud_cloth.jpg",
     properties: [
       "Extra-long staple cotton",
       "Diagonal twill weave texture",
@@ -1124,7 +1118,7 @@ export const fabrics: Fabric[] = [
     description:
       "Handwoven on traditional looms in Bonwire, the birthplace of Kente cloth. Each pattern carries deep cultural significance — from the Adwenasa (all motifs are exhausted) to the Enea (four-leaf clover for prosperity). Woven with silk and rayon threads for a luxurious drape.",
     texture:
-      "https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Ghanaian_African_Print_Fashion%2C_Dresses.jpg/960px-Ghanaian_African_Print_Fashion%2C_Dresses.jpg",
     properties: [
       "Handwoven on traditional narrow looms",
       "Silk and rayon thread blend",
@@ -1141,7 +1135,7 @@ export const fabrics: Fabric[] = [
     description:
       "The quintessential Yoruba textile, handwoven in Iseyin, Oyo State. Aso Oke (translated as 'top cloth') is traditionally reserved for special occasions. REGALIA sources the finest Alaari (red), Sanyan (brown/beige), and Etu (dark blue) varieties, incorporating metallic thread for contemporary luxury.",
     texture:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Regberegbe_Age_Groups.jpg/960px-The_Regberegbe_Age_Groups.jpg",
     properties: [
       "Handwoven on narrow-strip looms",
       "Three traditional colorways: Alaari, Sanyan, Etu",
@@ -1158,7 +1152,7 @@ export const fabrics: Fabric[] = [
     description:
       "From the silk farms of Karnataka, this pure mulberry silk is celebrated for its natural golden sheen and luxurious drape. Mysore Silk carries a Geographical Indication tag, ensuring authenticity and supporting the centuries-old tradition of Indian sericulture.",
     texture:
-      "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Ewe_kente_stripes%2C_Ghana.jpg/960px-Ewe_kente_stripes%2C_Ghana.jpg",
     properties: [
       "Pure mulberry silk",
       "Natural golden luster",
@@ -1175,7 +1169,7 @@ export const fabrics: Fabric[] = [
     description:
       "Pinnacle cotton voile from St. Gallen, the embroidery capital of the world. This ultra-fine, sheer cotton fabric is prized for its exceptional softness, delicate hand, and the subtle crispness that makes it ideal for structured yet feminine garments.",
     texture:
-      "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d44?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ewe_kente_2%2C_Ghana.JPG/960px-Ewe_kente_2%2C_Ghana.JPG",
     properties: [
       "Ultra-fine 120-thread-count voile",
       "St. Gallen heritage production",
@@ -1192,7 +1186,7 @@ export const fabrics: Fabric[] = [
     description:
       "Cultivated and woven in Niigata Prefecture, one of Japan's premier textile regions. This premium linen is made from European flax refined using traditional Japanese techniques, resulting in a fabric of extraordinary smoothness, strength, and character that improves with age.",
     texture:
-      "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kent_wove.jpg",
     properties: [
       "European flax, Japanese refinement",
       "Natural anti-bacterial properties",
@@ -1224,7 +1218,7 @@ export const services: Service[] = [
       "Digital lookbook for daily outfit planning",
     ],
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/African_Fashion_in_the_City.JPG/960px-African_Fashion_in_the_City.JPG",
   },
   {
     id: 2,
@@ -1241,7 +1235,7 @@ export const services: Service[] = [
       "Day-of emergency styling kit",
     ],
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/African_Fashion_in_Uganda_01.jpg/960px-African_Fashion_in_Uganda_01.jpg",
   },
   {
     id: 3,
@@ -1258,7 +1252,7 @@ export const services: Service[] = [
       "Dedicated account management",
     ],
     image:
-      "https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80",
+      "https://i.pinimg.com/736x/4d/ac/c3/4dacc3f44d4aae383997f97be9b4924e.jpg",
   },
   {
     id: 4,
@@ -1275,7 +1269,7 @@ export const services: Service[] = [
       "Exclusive invitations to REGALIA events",
     ],
     image:
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Fashion_in_the_City_3.JPG/960px-African_Fashion_in_the_City_3.JPG",
   },
   {
     id: 5,
@@ -1292,7 +1286,7 @@ export const services: Service[] = [
       "Ongoing quarterly reviews",
     ],
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mamadou_Tandja_2005.jpg",
   },
   {
     id: 6,
@@ -1309,7 +1303,7 @@ export const services: Service[] = [
       "Digital wardrobe management app access",
     ],
     image:
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
   },
 ];
 
@@ -1325,11 +1319,11 @@ export const journalPosts: JournalPost[] = [
     excerpt:
       "How African designers are redefining global power dressing by fusing cultural identity with sartorial excellence — and why the world's most influential leaders are taking notice.",
     category: "Style",
-    author: "June Adeyemi",
+    author: "June Aramide Eyenre",
     date: "2024-11-15",
     readTime: "8 min read",
     image:
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/1/16/Dashiki_and_kufi_%28cropped%29.jpg",
     featured: true,
   },
   {
@@ -1343,7 +1337,7 @@ export const journalPosts: JournalPost[] = [
     date: "2024-10-28",
     readTime: "12 min read",
     image:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/The_Regberegbe_Age_Groups.jpg/960px-The_Regberegbe_Age_Groups.jpg",
     featured: true,
   },
   {
@@ -1353,11 +1347,11 @@ export const journalPosts: JournalPost[] = [
     excerpt:
       "A step-by-step journey through the creation of a REGALIA bespoke suit — from the initial consultation and fabric selection to the final hand-stitching that transforms cloth into character.",
     category: "Craft",
-    author: "June Adeyemi",
+    author: "June Aramide Eyenre",
     date: "2024-10-10",
     readTime: "15 min read",
     image:
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Fashion_in_the_City_3.JPG/960px-African_Fashion_in_the_City_3.JPG",
     featured: false,
   },
   {
@@ -1371,7 +1365,7 @@ export const journalPosts: JournalPost[] = [
     date: "2024-09-22",
     readTime: "10 min read",
     image:
-      "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kent_wove.jpg",
     featured: false,
   },
   {
@@ -1385,7 +1379,7 @@ export const journalPosts: JournalPost[] = [
     date: "2024-09-05",
     readTime: "9 min read",
     image:
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80",
+      "https://i.pinimg.com/1200x/8d/3c/cd/8d3ccd15a0fc2535ea7b5330f3807595.jpg",
     featured: true,
   },
   {
@@ -1395,11 +1389,11 @@ export const journalPosts: JournalPost[] = [
     excerpt:
       "Luxury is not a price point — it is a standard of care. In this founding essay, we share the principles that guide every decision at REGALIA, from fabric sourcing to the way we answer the telephone.",
     category: "House",
-    author: "June Adeyemi",
+    author: "June Aramide Eyenre",
     date: "2024-08-18",
     readTime: "7 min read",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/African_Fashion_in_the_City_3.JPG/960px-African_Fashion_in_the_City_3.JPG",
     featured: false,
   },
   {
@@ -1413,7 +1407,7 @@ export const journalPosts: JournalPost[] = [
     date: "2024-08-01",
     readTime: "11 min read",
     image:
-      "https://images.unsplash.com/photo-1583292650898-7d22cd27ca6f?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Ghanaian_African_Print_Fashion%2C_Dresses.jpg/960px-Ghanaian_African_Print_Fashion%2C_Dresses.jpg",
     featured: false,
   },
   {
@@ -1427,7 +1421,7 @@ export const journalPosts: JournalPost[] = [
     date: "2024-07-15",
     readTime: "14 min read",
     image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/African_Fashion_in_the_City.JPG/960px-African_Fashion_in_the_City.JPG",
     featured: false,
   },
   {
@@ -1437,11 +1431,11 @@ export const journalPosts: JournalPost[] = [
     excerpt:
       "In an age of mass production, the art of bespoke tailoring is an act of rebellion. We document the 60-hour journey of a single REGALIA bespoke garment — and explain why every minute matters.",
     category: "Craft",
-    author: "June Adeyemi",
+    author: "June Aramide Eyenre",
     date: "2024-06-28",
     readTime: "13 min read",
     image:
-      "https://images.unsplash.com/photo-1624222247344-550fb60583dc?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Cultural_Fashion_and_Adornment%2C_El_Moez_St.%2C_00_%2870%29.JPG/960px-Cultural_Fashion_and_Adornment%2C_El_Moez_St.%2C_00_%2870%29.JPG",
     featured: false,
   },
 ];
@@ -1456,21 +1450,21 @@ export const timelineEvents: TimelineEvent[] = [
     year: "2014",
     title: "The First Stitch",
     description:
-      "June Adeyemi begins designing and sewing garments from a small studio in Lagos, driven by a singular vision: to create world-class luxury fashion rooted in African heritage. The first commission — a bespoke Agbada for a family friend's chieftaincy ceremony — sets the standard for everything that follows.",
+      "REGALIA begins on a busy Tse-Addo roadside in Accra, where Michael Agbenyega and June Aramide Eyenre first join Ghanaian tailoring culture with the finest Nigerian fabrics — driven by a singular vision: to create world-class luxury fashion rooted in African heritage. The first commission sets the standard for everything that follows.",
   },
   {
     id: 2,
     year: "2016",
-    title: "Forging International Partnerships",
+    title: "Forging Sourcing Partnerships",
     description:
-      "A transformative trip to the Biella textile district in Italy establishes direct relationships with heritage fabric mills. These partnerships give REGALIA access to the same Super 150s wool and silk fabrics used by the most prestigious fashion houses in Europe.",
+      "Direct sourcing relationships are established with Nigeria's great textile markets — Aba, Lagos, Onitsha and Kano — securing the finest fabrics, the freshest trends, and a deep command of ceremonial dress. Combined with heritage mills abroad, these partnerships give REGALIA access to materials used by the most prestigious houses in the world.",
   },
   {
     id: 3,
     year: "2017",
     title: "The REGALIA Atelier Opens",
     description:
-      "The first dedicated REGALIA atelier opens in Victoria Island, Lagos — a 3,000-square-foot space designed to house the full bespoke experience under one roof: consultation, measurement, fabric selection, fitting, and finishing.",
+      "The first dedicated REGALIA atelier opens in Accra — a 3,000-square-foot space designed to house the full bespoke experience under one roof: consultation, measurement, fabric selection, fitting, and finishing.",
   },
   {
     id: 4,
@@ -1498,7 +1492,7 @@ export const timelineEvents: TimelineEvent[] = [
     year: "2022",
     title: "International Recognition",
     description:
-      "REGALIA is featured in Vogue, GQ, and Financial Times as one of Africa's most exciting luxury brands. The brand receives the African Fashion International Award for Excellence in Craftsmanship, and opens a showroom in Accra, Ghana.",
+      "REGALIA is featured in Vogue, GQ, and Financial Times as one of Africa's most exciting luxury brands. The brand receives the African Fashion International Award for Excellence in Craftsmanship, and opens a showroom in Lagos, Nigeria — deepening the house's connection to Nigerian sourcing and clientele.",
   },
   {
     id: 8,
@@ -1516,19 +1510,19 @@ export const timelineEvents: TimelineEvent[] = [
 export const founders: Founder[] = [
   {
     id: 1,
-    name: "June Adeyemi",
-    role: "Founder & Creative Director",
-    bio: "Born in Lagos and trained in both Nigerian and Italian tailoring traditions, June Adeyemi founded REGALIA with a singular mission: to position African luxury fashion on the world stage without compromise. With over 15 years of experience in bespoke tailoring and a deep reverence for West African textile heritage, June oversees every aspect of design — from initial sketch to final stitch. A graduate of the London College of Fashion and a protege of master tailors in both Lagos and Milan, June's vision is the creative engine that drives the house forward.",
+    name: "Michael Agbenyega",
+    role: "Founder · Majority Shareholder · Executive Chairman & CEO",
+    bio: "As Founder, Majority Shareholder, and Executive Chairman & CEO of REGALIA, Michael Agbenyega steers the house with disciplined business leadership. He oversees strategic leadership, corporate governance, investor relations, financial oversight, and business development — while championing technology leadership and regional expansion across the continent. Michael's vision ensures that REGALIA's growth is as considered and precise as the garments it creates.",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b9/Mamadou_Tandja_2005.jpg",
   },
   {
     id: 2,
-    name: "Tobi Adeyemi-Cooper",
-    role: "Co-Founder & Managing Director",
-    bio: "Tobi Adeyemi-Cooper brings a rare combination of business acumen and aesthetic sensibility to REGALIA. With an MBA from INSEAD and a background in luxury brand management at LVMH, Tobi oversees operations, strategy, and the client experience. Raised between Lagos and London, Tobi understands the global luxury landscape while remaining deeply connected to the brand's African roots. Under Tobi's leadership, REGALIA has expanded from a single atelier to a multi-channel luxury house with international reach and a reputation for uncompromising quality.",
+    name: "June Aramide Eyenre",
+    role: "Co-Founder · Shareholder · Creative Director",
+    bio: "As Co-Founder, Shareholder, and Creative Director of REGALIA, June Aramide Eyenre is the creative heart of the house. June leads design, product development, and production — setting uncompromising standards in quality assurance and fashion innovation — while nurturing talent and cultivating sourcing relationships with Nigeria's finest textile suppliers. Every collection carries June's signature: African heritage reimagined through the lens of contemporary luxury.",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Philip_Emeagwali_in_white_%22agbada.%22.jpg/960px-Philip_Emeagwali_in_white_%22agbada.%22.jpg",
   },
 ];
 
@@ -1583,7 +1577,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/African_Fashion_in_the_City_4.JPG/960px-African_Fashion_in_the_City_4.JPG",
     likes: 4821,
     caption:
       "The Sovereign Suit. Commanding. Precise. Unapologetic. Cut from Italian Super 150s wool and finished with hand-padded shoulders. This is what authority looks like. #REGALIA #Bespoke #Menswear #AfricanLuxury",
@@ -1591,7 +1585,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/African_Fashion_in_the_City_6.JPG/960px-African_Fashion_in_the_City_6.JPG",
     likes: 7234,
     caption:
       "Heritage in every thread. Our Agbada Royale is handwoven by master artisans in Iseyin, Nigeria — each piece takes over 120 hours to complete. When tradition meets luxury, the result is timeless. #AsoOke #Heritage #REGALIA #NigerianFashion",
@@ -1599,7 +1593,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
+      "https://i.pinimg.com/736x/ec/eb/cf/ecebcf84219b93c9cbc8337358c7278f.jpg",
     likes: 5612,
     caption:
       "The Empress Gown — for the woman who enters a room and changes its energy entirely. Silk crepe de Chine, sculptural one-shoulder silhouette, and a train that commands every photographer's lens. #Womenswear #LuxuryFashion #REGALIA",
@@ -1607,7 +1601,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 4,
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/African_Fashion_in_the_City.JPG/960px-African_Fashion_in_the_City.JPG",
     likes: 3945,
     caption:
       "For the moments that define a lifetime. Our Wedding Collection is designed with devotion and crafted with precision — because your day deserves nothing less than perfection. #REGALIAWedding #BridalFashion #GroomStyle",
@@ -1615,7 +1609,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 5,
     image:
-      "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/African_Fashion_in_the_City_7.JPG/960px-African_Fashion_in_the_City_7.JPG",
     likes: 6108,
     caption:
       "Behind the scenes at our Lagos atelier. This is where cloth becomes character. Every REGALIA garment passes through the hands of at least 12 artisans before it reaches yours. #Atelier #Craftsmanship #MadeInNigeria #REGALIA",
@@ -1623,7 +1617,7 @@ export const instagramPosts: InstagramPost[] = [
   {
     id: 6,
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/African_Street_Style_Festival_2016_-_Colourful_African_style_clothing_for_sale.png/960px-African_Street_Style_Festival_2016_-_Colourful_African_style_clothing_for_sale.png",
     likes: 4390,
     caption:
       "The Kente Masterpiece — Limited to 12 pieces worldwide. Bonwire heritage meets Italian tailoring in a garment that transcends fashion. Only 4 remaining. Inquire privately. #LimitedEdition #Kente #AfricanLuxury #CollectibleFashion",

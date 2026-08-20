@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -58,14 +60,14 @@ export function ImageGallery({ images, alt, className }: ImageGalleryProps) {
         <>
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 md:h-10 md:w-10 items-center justify-center bg-white/80 backdrop-blur-sm text-obsidian hover:bg-white transition-colors duration-300"
+            className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 md:h-10 md:w-10 items-center justify-center bg-white/80 backdrop-blur-sm text-obsidian hover:bg-ivory transition-colors duration-300"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 md:h-10 md:w-10 items-center justify-center bg-white/80 backdrop-blur-sm text-obsidian hover:bg-white transition-colors duration-300"
+            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 md:h-10 md:w-10 items-center justify-center bg-white/80 backdrop-blur-sm text-obsidian hover:bg-ivory transition-colors duration-300"
             aria-label="Next image"
           >
             <ChevronRight className="w-5 h-5" />

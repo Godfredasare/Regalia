@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -22,7 +24,7 @@ export function Newsletter() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-obsidian/70 mb-4">
             The House of June
           </p>
           <h2 className="heading-md text-obsidian mb-4">Join Our World</h2>

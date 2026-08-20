@@ -1,3 +1,6 @@
+'use client'
+
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 
@@ -10,9 +13,11 @@ interface ProductCardProps {
   className?: string
 }
 
+const MotionLink = motion.create(Link)
+
 export function ProductCard({ name, price, image, fabric, slug, className }: ProductCardProps) {
   return (
-    <motion.a
+    <MotionLink
       href={`/product/${slug}`}
       className={cn('group block', className)}
       initial={{ opacity: 0, y: 20 }}
@@ -49,6 +54,6 @@ export function ProductCard({ name, price, image, fabric, slug, className }: Pro
           ${price.toLocaleString()}
         </p>
       </div>
-    </motion.a>
+    </MotionLink>
   )
 }

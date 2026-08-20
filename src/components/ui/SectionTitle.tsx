@@ -29,7 +29,7 @@ export function SectionTitle({
         <p
           className={cn(
             'mb-4 text-[11px] font-medium uppercase tracking-[0.3em]',
-            light ? 'text-gold' : 'text-gold'
+            light ? 'text-gold' : 'text-obsidian/70'
           )}
         >
           {subtitle}

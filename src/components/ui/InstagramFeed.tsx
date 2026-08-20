@@ -1,14 +1,16 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { Camera } from 'lucide-react'
 import { instagramPosts } from '@/data'
 
 export function InstagramFeed() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-ivory">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-gold mb-3">
+            <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-obsidian/70 mb-3">
               Follow Us
             </p>
             <h2 className="heading-sm text-obsidian">@regaliajune</h2>

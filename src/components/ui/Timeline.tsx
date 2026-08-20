@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -33,7 +35,7 @@ export function Timeline({ items, className }: TimelineProps) {
               'flex-1',
               i % 2 === 0 ? 'md:text-right' : 'md:text-left'
             )}>
-              <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-gold mb-2">
+              <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-obsidian/60 mb-2">
                 {item.year}
               </p>
               <h3 className="font-heading text-xl font-light text-obsidian mb-2">
