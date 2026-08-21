@@ -125,11 +125,12 @@ export function Navbar() {
           </div>
 
           {/* Center — Logo */}
-          <Link
-            href="/"
-            className="font-heading text-xl md:text-2xl font-light tracking-[0.25em] whitespace-nowrap"
-          >
-            REGALIA
+          <Link href="/" aria-label="REGALIA — Home" className="flex items-center">
+            <img
+              src="/logo2.png"
+              alt="REGALIA"
+              className="h-9 w-9 md:h-10 md:w-10 object-contain"
+            />
           </Link>
 
           {/* Right Nav + Icons */}
@@ -190,7 +191,11 @@ export function Navbar() {
               className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-ivory z-[101] overflow-y-auto flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-border-subtle pt-[calc(1.5rem+env(safe-area-inset-top,0px))]">
-                <span className="font-heading text-xl tracking-[0.2em]">REGALIA</span>
+                <img
+                  src="/logo2.png"
+                  alt="REGALIA"
+                  className="h-9 w-9 object-contain"
+                />
                 <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
                   <X className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
                 </button>

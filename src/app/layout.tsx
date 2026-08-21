@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   description:
     'REGALIA by June & Co. — Where African heritage meets modern luxury. Bespoke tailoring, editorial fashion, and premium fabrics from across the world.',
-  icons: { icon: '/favicon.svg' },
+  icons: { icon: '/favicon.png' },
 }
 
 export default function RootLayout({

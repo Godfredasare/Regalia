@@ -42,8 +42,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 mb-14 md:mb-20">
           {/* Brand Column */}
           <div className="lg:col-span-2 text-center md:text-left">
-            <Link href="/" className="font-heading text-2xl md:text-3xl font-light tracking-wider block mb-6">
-              REGALIA
+            <Link href="/" className="flex items-center justify-center md:justify-start mb-6" aria-label="REGALIA — Home">
+              <img
+                src="/logo.png"
+                alt="REGALIA"
+                className="h-12 md:h-14 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm font-light text-white/50 leading-relaxed max-w-sm mx-auto md:mx-0 mb-6">
               Where African heritage meets modern luxury. Bespoke tailoring and editorial fashion from the House of June & Co.
