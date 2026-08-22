@@ -11,6 +11,7 @@ import { ProductCard } from '@/components/ui/ProductCard'
 import { LuxuryBanner } from '@/components/ui/LuxuryBanner'
 import { Newsletter } from '@/components/ui/Newsletter'
 import { Button } from '@/components/ui/Button'
+import { PetiteCrossLink } from '@/components/ui/PetiteCrossLink'
 
 // ---------------------------------------------------------------------------
 // Animation variants
@@ -204,8 +205,10 @@ export default function CollectionCategory({ slug }: { slug: string }) {
                     name={product.name}
                     price={product.price}
                     image={product.images[0]}
+                    hoverImage={product.images[1]}
                     fabric={product.fabric}
                     slug={product.slug}
+                    isNewArrival={product.newArrival}
                   />
                 </motion.div>
               ))}
@@ -228,7 +231,12 @@ export default function CollectionCategory({ slug }: { slug: string }) {
       </section>
 
       {/* ================================================================== */}
-      {/* 4. NEWSLETTER                                                     */}
+      {/* 4. PETITE CROSS-LINK (family occasions: Native Wear & Wedding)     */}
+      {/* ================================================================== */}
+      {(slug === 'native-wear' || slug === 'wedding') && <PetiteCrossLink />}
+
+      {/* ================================================================== */}
+      {/* 5. NEWSLETTER                                                     */}
       {/* ================================================================== */}
       <Newsletter />
     </PageTransition>

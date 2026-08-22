@@ -229,13 +229,14 @@ export default function Page() {
                   i === 1 && 'sm:[&>*:first-child]:order-2'
                 )}
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="group relative aspect-[3/4] overflow-hidden">
                   <img
                     src={founder.image}
                     alt={founder.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-[1600ms] ease-lux group-hover:scale-[1.04]"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 border border-gold/20 pointer-events-none" />
+                  <div className="pointer-events-none absolute inset-0 border border-gold/25 transition-colors duration-700 group-hover:border-gold/50" />
                 </div>
 
                 <div className="flex flex-col justify-center">

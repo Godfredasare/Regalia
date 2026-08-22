@@ -22,6 +22,7 @@ const navLinksLeft = [
       { label: 'Ready to Wear', href: '/collections/ready-to-wear' },
       { label: 'Limited Editions', href: '/collections/limited-editions' },
       { label: 'Accessories', href: '/collections/accessories' },
+      { label: 'Petite', href: '/collections/petite', accent: true },
     ],
   },
   { label: 'Bespoke', href: '/bespoke' },
@@ -78,6 +79,7 @@ export function Navbar() {
           isHome && !isScrolled
             ? 'bg-transparent'
             : 'bg-navy/95 backdrop-blur-md',
+          !isHome || isScrolled ? 'shadow-[0_1px_0_rgba(201,162,39,0.25)]' : '',
           isHome && !isScrolled ? 'text-white' : 'text-ivory'
         )}
       >
@@ -112,8 +114,11 @@ export function Navbar() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block px-6 py-2.5 text-[11px] font-light text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300"
+                          className="flex items-center gap-2 px-6 py-3 text-[11px] font-light text-obsidian transition-all duration-300 hover:bg-ivory-light hover:text-gold"
                         >
+                          {'accent' in child && child.accent && (
+                            <span className="h-1 w-1 rounded-full bg-emerald" />
+                          )}
                           {child.label}
                         </Link>
                       ))}
@@ -216,7 +221,7 @@ export function Navbar() {
                               expandedMobile === link.label ? null : link.label
                             )
                           }
-                          className="w-full flex items-center justify-between px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300 border-b border-border-subtle/30"
+                          className="w-full flex items-center justify-between px-8 py-4 text-[12px] font-medium uppercase tracking-[0.15em] text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300 border-b border-border-subtle/30"
                         >
                           {link.label}
                           <ChevronRight
@@ -240,7 +245,7 @@ export function Navbar() {
                                 <Link
                                   key={child.label}
                                   href={child.href}
-                                  className="block px-12 py-3 text-[11px] font-light uppercase tracking-[0.12em] text-warm-gray hover:text-gold hover:bg-ivory-light/80 transition-all duration-300 border-b border-border-subtle/20"
+                                  className="block px-12 py-3.5 text-[11px] font-light uppercase tracking-[0.12em] text-warm-gray hover:text-gold hover:bg-ivory-light/80 transition-all duration-300 border-b border-border-subtle/20"
                                   onClick={() => setMobileOpen(false)}
                                 >
                                   {child.label}
@@ -253,7 +258,7 @@ export function Navbar() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="block px-8 py-3.5 text-[12px] font-medium uppercase tracking-[0.15em] text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300 border-b border-border-subtle/30"
+                        className="block px-8 py-4 text-[12px] font-medium uppercase tracking-[0.15em] text-obsidian hover:text-gold hover:bg-ivory-light transition-all duration-300 border-b border-border-subtle/30 active:bg-ivory-light/60"
                       >
                         {link.label}
                       </Link>

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Heart, Ruler, Truck, RotateCcw, Gem } from 'lucide-react'
 import { products } from '@/data'
+import { PETITE_AGE } from '@/data/petite'
 import { cn, formatPrice } from '@/lib/utils'
 import { PageTransition } from '@/components/ui/PageTransition'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -12,6 +13,7 @@ import { ProductCard } from '@/components/ui/ProductCard'
 import { ImageGallery } from '@/components/ui/ImageGallery'
 import { Newsletter } from '@/components/ui/Newsletter'
 import { Button } from '@/components/ui/Button'
+import { PetiteCrossLink } from '@/components/ui/PetiteCrossLink'
 
 // ---------------------------------------------------------------------------
 // Animation variants
@@ -107,6 +109,16 @@ export default function ProductDetail({ slug }: { slug: string }) {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 4)
 
+  // Petite pieces branch the existing selector (no second page template):
+  // ages 1–12 instead of adult S/M/L, with the emerald house accent.
+  const isPetite = product.category === 'Petite'
+  const petiteAges = isPetite
+    ? Array.from(
+        { length: PETITE_AGE.max - PETITE_AGE.min + 1 },
+        (_, i) => PETITE_AGE.min + i
+      )
+    : []
+
   return (
     <PageTransition>
       {/* ================================================================== */}
@@ -191,31 +203,95 @@ export default function ProductDetail({ slug }: { slug: string }) {
                 ))}
               </motion.ul>
 
-              {/* Size selector */}
+              {/* Size selector — branched on collection: ages 1–12 for
+                  Petite, the adult S/M/L selector for everything else */}
               <motion.div variants={fadeUpChild} className="mb-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Ruler className="w-4 h-4 text-warm-gray" strokeWidth={1.5} />
-                  <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian">
-                    Select Size
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  {product.sizes.map((size) => (
-                    <button
-                      key={size}
-                      onClick={() => setSelectedSize(size)}
-                      className={cn(
-                        'flex items-center justify-center w-12 h-12 border text-xs uppercase tracking-wider transition-all duration-300',
-                        selectedSize === size
-                          ? 'border-gold bg-gold text-white'
-                          : 'border-border-subtle text-obsidian hover:border-gold'
-                      )}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </div>
+                {isPetite ? (
+                  <>
+                    <div className="mb-4 flex items-center gap-3">
+                      <Ruler className="h-4 w-4 text-warm-gray" strokeWidth={1.5} />
+                      <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian">
+                        Select Age
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.15em] text-warm-gray/70">
+                        Years · made to measure
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                      {petiteAges.map((age) => (
+                        <button
+                          key={age}
+                          onClick={() => setSelectedSize(String(age))}
+                          aria-label={`Age ${age} years`}
+                          className={cn(
+                            'flex h-12 w-12 items-center justify-center border text-xs tracking-wider transition-all duration-300 active:scale-95',
+                            selectedSize === String(age)
+                              ? 'border-emerald bg-emerald text-white'
+                              : 'border-border-subtle text-obsidian hover:border-emerald'
+                          )}
+                        >
+                          {age}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-[11px] font-light leading-relaxed text-warm-gray">
+                      Every Petite piece is cut to your child&rsquo;s
+                      measurements — the age guides the first pattern, and we
+                      build in a little grace for growing.
+                    </p>
+                  </>
+                ) : product.sizes.length > 0 ? (
+                  <>
+                    <div className="mb-4 flex items-center gap-3">
+                      <Ruler className="h-4 w-4 text-warm-gray" strokeWidth={1.5} />
+                      <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian">
+                        Select Size
+                      </span>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                      {product.sizes.map((size) => (
+                        <button
+                          key={size}
+                          onClick={() => setSelectedSize(size)}
+                          className={cn(
+                            'flex h-12 w-12 items-center justify-center border text-xs uppercase tracking-wider transition-all duration-300 active:scale-95',
+                            selectedSize === size
+                              ? 'border-gold bg-gold text-white'
+                              : 'border-border-subtle text-obsidian hover:border-gold'
+                          )}
+                        >
+                          {size}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex items-center gap-3">
+                    <Ruler className="h-4 w-4 text-warm-gray" strokeWidth={1.5} />
+                    <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-obsidian">
+                      Made to measure
+                    </span>
+                  </div>
+                )}
               </motion.div>
+
+              {/* Petite care note — the label sits at the side seam, not the neck */}
+              {isPetite && (
+                <motion.div
+                  variants={fadeUpChild}
+                  className="mb-8 border border-emerald/30 bg-ivory-light p-5"
+                >
+                  <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-emerald">
+                    Care
+                  </p>
+                  <p className="body-md leading-relaxed text-warm-gray">
+                    Turn inside out to launder; wash cool or dry-clean as the
+                    label directs; cool iron. Full guidance is on the care
+                    label, placed at the side seam rather than the neck — so
+                    nothing rubs against a child&rsquo;s skin.
+                  </p>
+                </motion.div>
+              )}
 
               {/* Action buttons */}
               <motion.div
@@ -313,8 +389,10 @@ export default function ProductDetail({ slug }: { slug: string }) {
                     name={relProduct.name}
                     price={relProduct.price}
                     image={relProduct.images[0]}
+                    hoverImage={relProduct.images[1]}
                     fabric={relProduct.fabric}
                     slug={relProduct.slug}
+                    isNewArrival={relProduct.newArrival}
                   />
                 </motion.div>
               ))}
@@ -324,7 +402,14 @@ export default function ProductDetail({ slug }: { slug: string }) {
       )}
 
       {/* ================================================================== */}
-      {/* 4. NEWSLETTER                                                     */}
+      {/* 4. PETITE CROSS-LINK (family occasions: Native Wear & Wedding)     */}
+      {/* ================================================================== */}
+      {(product.category === 'Native Wear' || product.category === 'Wedding') && (
+        <PetiteCrossLink />
+      )}
+
+      {/* ================================================================== */}
+      {/* 5. NEWSLETTER                                                     */}
       {/* ================================================================== */}
       <Newsletter />
     </PageTransition>

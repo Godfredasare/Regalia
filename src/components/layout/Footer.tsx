@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Camera, X, Share2, ArrowUp } from 'lucide-react'
+import { Camera, AtSign, Share2, ArrowUp } from 'lucide-react'
 
 const footerLinks = {
   collections: [
@@ -10,7 +10,7 @@ const footerLinks = {
     { label: 'Native Wear', href: '/collections/native-wear' },
     { label: 'Corporate', href: '/collections/corporate' },
     { label: 'Wedding', href: '/collections/wedding' },
-    { label: 'Accessories', href: '/collections/accessories' },
+    { label: 'Petite', href: '/collections/petite' },
   ],
   house: [
     { label: 'Our Story', href: '/about' },
@@ -30,40 +30,56 @@ const footerLinks = {
   ],
 }
 
+const socials = [
+  { Icon: Camera, label: 'Instagram' },
+  { Icon: AtSign, label: 'Twitter' },
+  { Icon: Share2, label: 'Social share' },
+]
+
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
-    <footer className="bg-obsidian text-white">
-      {/* Main Footer */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-8 md:pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 mb-14 md:mb-20">
+    <footer className="relative bg-navy-dark text-white">
+      {/* Gold hairline crown */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+
+      <div className="mx-auto max-w-[1400px] px-6 pb-8 pt-16 md:px-12 md:pb-12 md:pt-20">
+        <div className="mb-14 grid grid-cols-2 gap-10 md:mb-16 md:grid-cols-2 md:gap-12 lg:grid-cols-5 lg:gap-8">
           {/* Brand Column */}
-          <div className="lg:col-span-2 text-center md:text-left">
-            <Link href="/" className="flex items-center justify-center md:justify-start mb-6" aria-label="REGALIA — Home">
+          <div className="col-span-2 text-center md:text-left">
+            <Link
+              href="/"
+              className="mb-6 inline-flex items-center justify-center md:justify-start"
+              aria-label="REGALIA — Home"
+            >
               <img
                 src="/logo.png"
                 alt="REGALIA"
-                className="h-12 md:h-14 w-auto object-contain"
+                className="h-12 w-auto object-contain md:h-14"
               />
             </Link>
-            <p className="text-sm font-light text-white/50 leading-relaxed max-w-sm mx-auto md:mx-0 mb-6">
-              Where African heritage meets modern luxury. Bespoke tailoring and editorial fashion from the House of June & Co.
+            <p className="mx-auto mb-6 max-w-sm text-sm font-light leading-relaxed text-white/50 md:mx-0">
+              Where African heritage meets modern luxury. Bespoke tailoring and
+              editorial fashion from the House of June &amp; Co.
             </p>
-            <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-gold mb-8">
+            <p className="mb-2 text-[11px] font-medium uppercase tracking-[0.25em] text-gold">
+              Accra · Lagos
+            </p>
+            <p className="mb-8 font-accent text-[13px] italic text-white/40">
               Every Stitch Tells a Story of Excellence.
             </p>
-            <div className="flex justify-center md:justify-start gap-5">
-              {[Camera, X, Share2].map((Icon, i) => (
+            <div className="flex justify-center gap-3 md:justify-start">
+              {socials.map(({ Icon, label }) => (
                 <Link
-                  key={i}
-                  href="/"
-                  aria-label="Social link"
-                  className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/50 hover:text-gold hover:border-gold/50 transition-all duration-300"
+                  key={label}
+                  href="#"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center border border-white/15 text-white/50 transition-all duration-500 hover:border-gold/60 hover:text-gold active:scale-95"
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="h-4 w-4" strokeWidth={1.5} />
                 </Link>
               ))}
             </div>
@@ -72,15 +88,15 @@ export function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title} className="text-center md:text-left">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.25em] text-white/60 mb-6">
+              <h4 className="mb-5 text-[11px] font-medium uppercase tracking-[0.25em] text-gold/80">
                 {title}
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[13px] font-light text-white/50 hover:text-white transition-colors duration-300"
+                      className="link-underline inline-block py-1 text-[13px] font-light text-white/50 transition-colors duration-300 hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -92,23 +108,30 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[11px] text-white/30 tracking-wider">
-            &copy; {new Date().getFullYear()} REGALIA by June & Co. All rights reserved.
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
+          <p className="text-[11px] tracking-wider text-white/30">
+            &copy; {new Date().getFullYear()} REGALIA by June &amp; Co. All
+            rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-[11px] text-white/30 hover:text-white/60 transition-colors tracking-wider">
+            <a
+              href="#"
+              className="text-[11px] tracking-wider text-white/30 transition-colors hover:text-white/60"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-[11px] text-white/30 hover:text-white/60 transition-colors tracking-wider">
+            <a
+              href="#"
+              className="text-[11px] tracking-wider text-white/30 transition-colors hover:text-white/60"
+            >
               Terms of Service
             </a>
             <button
               onClick={scrollToTop}
-              className="w-10 h-10 flex items-center justify-center border border-white/15 text-white/40 hover:text-gold hover:border-gold/50 transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center border border-white/15 text-white/40 transition-all duration-300 hover:border-gold/50 hover:text-gold active:scale-95"
               aria-label="Scroll to top"
             >
-              <ArrowUp className="w-4 h-4" />
+              <ArrowUp className="h-4 w-4" strokeWidth={1.5} />
             </button>
           </div>
         </div>

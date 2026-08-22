@@ -16,6 +16,10 @@ export interface Product {
   sizes: string[];
   colors: string[];
   relatedProducts: number[];
+  /** Petite only — children's age range (e.g. "1–12 Years"), in place of adult sizes. */
+  ageRange?: string;
+  /** Petite only — the adult product this piece matches (for future Mini-Me pairing). */
+  matchesAdultProductId?: number;
 }
 
 export interface Collection {
@@ -880,6 +884,38 @@ export const products: Product[] = [
     colors: ["Navy", "Burgundy", "Ivory", "Emerald"],
     relatedProducts: [24, 25, 1],
   },
+  // ── Petite (children's line) ──────────────────────────────────────────────
+  // PLACEHOLDER product — real Petite photography/entries to be supplied.
+  {
+    id: 27,
+    name: "The Little Sovereign Kaftan",
+    slug: "the-little-sovereign-kaftan",
+    price: 480,
+    category: "Petite",
+    subcategory: "Kaftans",
+    fabric: "Soft breathable cotton",
+    description:
+      "A junior kaftan in soft, breathable cloth with the REGALIA hand — clean lines, gentle finishing and a touch of gold at the collar. Made for naming ceremonies, weddings, and the days that end up framed on the wall.",
+    details: [
+      "Soft, breathable fabric",
+      "Covered, comfortable seams",
+      "Woven Petite label, no metal",
+      "Cut to your child's measurements",
+      "Room to move, with a little grace to grow",
+    ],
+    images: [
+      "https://i.pinimg.com/736x/1a/ad/2b/1aad2b114c31f04b178dee1e26858f84.jpg",
+      "https://i.pinimg.com/736x/cc/84/7c/cc847c0ce5c9f0828e91e0f155fe1f89.jpg",
+      "https://i.pinimg.com/736x/11/da/f1/11daf18f60c2954e23c8d9e48910277e.jpg",
+    ],
+    featured: true,
+    newArrival: true,
+    sizes: [],
+    ageRange: "1\u201312 Years",
+    colors: ["Emerald & Gold", "Ivory & Gold", "Midnight & Gold"],
+    relatedProducts: [],
+    matchesAdultProductId: 1, // pairs with The Sovereign Suit — ready for Mini-Me
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -985,6 +1021,17 @@ export const collections: Collection[] = [
       "https://i.pinimg.com/1200x/c1/20/02/c120027e9afa1eda8f36fd8bf3382f3e.jpg",
     productCount: 3,
     featured: false,
+  },
+  {
+    id: 10,
+    name: "Petite",
+    slug: "petite",
+    description:
+      "Ceremonial and occasion wear for children — crafted with the care of the house, and made for the way children actually move. Distinction begins early.",
+    image:
+      "https://i.pinimg.com/736x/11/da/f1/11daf18f60c2954e23c8d9e48910277e.jpg",
+    productCount: 1,
+    featured: true,
   },
 ];
 

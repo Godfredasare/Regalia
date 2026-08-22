@@ -8,7 +8,11 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return collections.map((collection) => ({ slug: collection.slug }))
+  // '/collections/petite' has its own dedicated page — exclude it here so the
+  // dynamic route never double-generates a conflicting static path.
+  return collections
+    .filter((collection) => collection.slug !== 'petite')
+    .map((collection) => ({ slug: collection.slug }))
 }
 
 export async function generateMetadata({

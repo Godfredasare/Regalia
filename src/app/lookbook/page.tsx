@@ -184,10 +184,19 @@ export default function Page() {
             viewport={{ once: true, margin: '-50px' }}
             variants={fadeUpChild}
           >
-            <div className="relative aspect-video bg-midnight overflow-hidden group cursor-pointer">
+            <div className="relative aspect-video overflow-hidden group cursor-pointer bg-navy-dark">
+              {/* Still frame behind the play button */}
+              <img
+                src="https://i.pinimg.com/1200x/21/f9/31/21f93146734665be2a6fc213f548b0b9.jpg"
+                alt=""
+                aria-hidden
+                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-[2500ms] ease-lux group-hover:scale-[1.04]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-navy-dark/30 to-navy-dark/20" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full border-2 border-gold/80 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:border-gold">
-                  <Play className="w-7 h-7 text-gold ml-1" fill="currentColor" />
+                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gold/80 backdrop-blur-sm transition-all duration-500 ease-lux group-hover:scale-110 group-hover:border-gold md:h-20 md:w-20">
+                  <Play className="ml-1 h-6 w-6 fill-gold text-gold md:h-7 md:w-7" />
                 </div>
               </div>
             </div>

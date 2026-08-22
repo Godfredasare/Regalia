@@ -89,6 +89,7 @@ export default function Page() {
                   image={collection.image}
                   slug={collection.slug}
                   productCount={collection.productCount}
+                  accent={collection.slug === 'petite' ? 'emerald' : 'default'}
                 />
               </motion.div>
             ))}

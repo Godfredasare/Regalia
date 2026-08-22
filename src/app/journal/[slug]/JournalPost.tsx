@@ -48,13 +48,12 @@ export default function JournalPost({ slug }: { slug: string }) {
   return (
     <PageTransition>
       {/* Hero */}
-      <section className="relative min-h-[55vh] md:min-h-[65vh] flex items-end overflow-hidden">
+      <section className="relative flex min-h-[55svh] items-end overflow-hidden md:min-h-[65svh]">
         <motion.div
           className="absolute inset-0"
-          initial={{ scale: 1 }}
-          whileInView={{ scale: 1.05 }}
-          transition={{ duration: 20, ease: 'easeInOut' }}
-          viewport={{ once: true }}
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <img
             src={post.image}
@@ -62,37 +61,38 @@ export default function JournalPost({ slug }: { slug: string }) {
             className="h-full w-full object-cover"
           />
         </motion.div>
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-12 py-20 md:py-28">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/55 via-navy-dark/40 to-navy-dark/80" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-4xl px-6 py-16 md:px-12 md:py-24">
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[11px] font-medium uppercase tracking-[0.3em] text-gold mb-4"
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="mb-4 text-[11px] font-medium uppercase tracking-[0.3em] text-gold"
           >
             {post.category}
           </motion.p>
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-            className="heading-lg text-white mb-6 max-w-3xl"
+            transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="heading-lg mb-6 max-w-3xl text-white"
           >
             {post.title}
           </motion.h1>
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm text-white/70"
+            transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-wrap items-center gap-3 text-xs text-white/70 md:gap-6 md:text-sm"
           >
             <span className="flex items-center gap-1.5">
-              <User className="w-3.5 h-3.5" />
+              <User className="h-3.5 w-3.5" />
               {post.author}
             </span>
             <span>{formatDate(post.date)}</span>
             <span className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
+              <Clock className="h-3.5 w-3.5" />
               {post.readTime}
             </span>
           </motion.div>

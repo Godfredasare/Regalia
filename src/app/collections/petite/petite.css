@@ -1,0 +1,33 @@
+/* REGALIA Petite — scoped theme. Overrides the accent CSS variable ONLY inside
+   the Petite page subtree (applied via a .petite-theme wrapper). Emerald is
+   Petite-only; the global REGALIA tokens are untouched. */
+.petite-theme {
+  --petite-accent: #0f5b43;      /* Emerald 342 C */
+  --petite-accent-soft: #2a7a5c;
+  --petite-on-accent: #fbf8f0;   /* Ivory Cream — text on emerald surfaces */
+}
+
+/* Scoped helpers — repeated emerald treatments within the Petite subtree.
+   They intentionally DO NOT exist outside .petite-theme. */
+.petite-text {
+  color: var(--petite-accent);
+}
+
+.petite-border {
+  border-color: color-mix(in srgb, var(--petite-accent) 45%, transparent);
+}
+
+.petite-surface {
+  background-color: var(--petite-accent);
+  color: var(--petite-on-accent);
+}
+
+.petite-hairline {
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--petite-accent) 55%, transparent),
+    transparent
+  );
+  height: 1px;
+}

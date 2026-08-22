@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Check } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { Button } from './Button'
 
 export function Newsletter() {
   const [email, setEmail] = useState('')
@@ -16,50 +15,61 @@ export function Newsletter() {
   }
 
   return (
-    <section className="bg-ivory py-24">
-      <div className="max-w-2xl mx-auto px-6 text-center">
+    <section className="border-t border-border-subtle bg-ivory py-20 md:py-28">
+      <div className="mx-auto max-w-2xl px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-obsidian/70 mb-4">
+          <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.35em] text-gold">
             The House of June
           </p>
-          <h2 className="heading-md text-obsidian mb-4">Join Our World</h2>
-          <div className="gold-line-long mx-auto mb-6" />
-          <p className="body-md text-warm-gray mb-10 max-w-md mx-auto">
-            Receive exclusive invitations to private viewings, early access to new collections, and insights from our creative directors.
+          <h2 className="heading-md mb-5 text-obsidian">Join Our World</h2>
+          <div className="gold-line-long mx-auto mb-7" />
+          <p className="body-md mx-auto mb-10 max-w-md leading-relaxed text-warm-gray">
+            Receive exclusive invitations to private viewings, early access to
+            new collections, and insights from our creative directors.
           </p>
 
           {!submitted ? (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+            <form
+              onSubmit={handleSubmit}
+              className="mx-auto flex max-w-lg flex-col gap-4 sm:flex-row"
+            >
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="flex-1 border-b border-border-subtle bg-transparent py-3 px-1 text-obsidian font-light focus:outline-none focus:border-gold transition-colors duration-300 placeholder:text-light-gray text-center sm:text-left"
+                aria-label="Email address"
+                className="flex-1 border-b border-border-subtle bg-transparent px-1 py-3 font-light text-obsidian transition-colors duration-500 placeholder:text-light-gray focus:border-gold focus:outline-none sm:text-left"
                 required
               />
-              <Button type="submit" variant="primary" size="md" className="gap-2">
+              <button
+                type="submit"
+                className="group inline-flex min-h-[44px] items-center justify-center gap-2 border border-obsidian/70 px-8 py-3 text-xs uppercase tracking-[0.18em] text-obsidian transition-all duration-500 ease-lux hover:border-obsidian hover:bg-obsidian hover:text-white active:scale-[0.97]"
+              >
                 Subscribe
-                <ArrowRight className="w-4 h-4" />
-              </Button>
+                <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+              </button>
             </form>
           ) : (
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-gold font-heading text-xl"
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex items-center gap-2 font-heading text-xl text-gold"
             >
+              <Check className="h-5 w-5" strokeWidth={1.5} />
               Welcome to the House of June.
             </motion.p>
           )}
 
-          <p className="text-[11px] text-warm-gray/60 mt-6">
-            By subscribing, you agree to our privacy policy. Unsubscribe anytime.
+          <p className="mt-6 text-[11px] text-warm-gray/60">
+            By subscribing, you agree to our privacy policy. Unsubscribe
+            anytime.
           </p>
         </motion.div>
       </div>

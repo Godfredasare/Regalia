@@ -110,7 +110,7 @@ export default function Page() {
                 whileInView="visible"
                 viewport={{ once: true, margin: '-50px' }}
                 variants={fadeUp}
-                className="group relative aspect-[4/3] overflow-hidden cursor-pointer"
+                className="group relative min-h-[420px] overflow-hidden cursor-pointer"
               >
                 {/* Background image */}
                 <img

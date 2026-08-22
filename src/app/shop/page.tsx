@@ -101,7 +101,7 @@ export default function Page() {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={cn(
-                    'px-3 md:px-4 py-1.5 md:py-2 text-[10px] md:text-[11px] font-medium uppercase tracking-[0.15em] border transition-all duration-300 whitespace-nowrap',
+                    'px-3 md:px-4 py-2 md:py-2 text-[10px] md:text-[11px] font-medium uppercase tracking-[0.15em] border transition-all duration-300 whitespace-nowrap active:scale-95',
                     activeCategory === cat
                       ? 'bg-obsidian text-white border-obsidian'
                       : 'bg-transparent text-warm-gray border-border-subtle hover:border-obsidian/40 hover:text-obsidian'
@@ -156,8 +156,10 @@ export default function Page() {
                     name={product.name}
                     price={product.price}
                     image={product.images[0]}
+                    hoverImage={product.images[1]}
                     fabric={product.fabric}
                     slug={product.slug}
+                    isNewArrival={product.newArrival}
                   />
                 </motion.div>
               ))}

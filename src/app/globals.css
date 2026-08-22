@@ -54,11 +54,19 @@
   --font-accent: var(--font-editorial), "EB Garamond", Georgia, serif;
   --font-body: var(--font-ui), "Montserrat", system-ui, sans-serif;
 
+  /* ------------------------------------------------------------
+     MOTION SYSTEM — one signature easing for the whole house.
+     `ease-lux` is exposed as a Tailwind utility (ease-lux).
+     ------------------------------------------------------------ */
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-lux-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
   --animate-fade-in: fade-in 0.8s ease-out forwards;
   --animate-fade-up: fade-up 0.8s ease-out forwards;
   --animate-slide-in: slide-in 0.6s ease-out forwards;
   --animate-slow-zoom: slow-zoom 20s ease-in-out infinite alternate;
   --animate-text-reveal: text-reveal 1s ease-out forwards;
+  --animate-marquee: marquee 40s linear infinite;
 }
 
 @keyframes fade-in {
@@ -86,11 +94,20 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Endless marquee — duplicate content twice inside the track and it
+   loops seamlessly. Paused on hover, disabled under reduced motion. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Base Styles */
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Keep anchored sections clear of the fixed 72px navbar */
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -110,7 +127,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  background: color-mix(in srgb, var(--color-gold) 70%, transparent);
   border-radius: 3px;
 }
 
@@ -129,12 +146,25 @@ body {
   color: white;
 }
 
+/* Accessible focus — visible only for keyboard users */
+:focus-visible {
+  outline: 1.5px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
 /* Luxury Heading Styles */
+.heading-xl,
+.heading-lg,
+.heading-md,
+.heading-sm {
+  text-wrap: balance;
+}
+
 .heading-xl {
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: 0.01em;
 }
 
@@ -142,7 +172,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.12;
   letter-spacing: 0.01em;
 }
 
@@ -150,14 +180,14 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.18;
 }
 
 .heading-sm {
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.28;
 }
 
 /* Luxury Body Styles */
@@ -189,6 +219,30 @@ body {
   background: var(--color-gold);
 }
 
+/* Animated underline for inline links — grows from the left on hover.
+   Pure CSS so it works identically with touch and reduced motion. */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.6s var(--ease-lux);
+}
+@media (hover: hover) {
+  .link-underline:hover::after,
+  .group:hover .link-underline::after {
+    transform: scaleX(1);
+  }
+}
+
 /* Image overlay gradient */
 .hero-overlay {
   background: linear-gradient(
@@ -208,4 +262,23 @@ body {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.5s ease;
+}
+
+/* ============================================================
+   REDUCED MOTION — respect the OS setting everywhere.
+   Kills CSS keyframe/transition motion globally; Framer Motion
+   components additionally gate JS-driven transforms through
+   useReducedMotion() where parallax/scrub is involved.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
